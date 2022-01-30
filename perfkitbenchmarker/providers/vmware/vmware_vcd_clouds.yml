@@ -1,0 +1,55 @@
+integratedcomputingstandard:
+  name: Integrated Computing Standard
+  abbreviation: ICS
+  host: cloud.integratedsolutions.pl
+  # Defaults:
+  # port: 443
+  # verify_ssl: True
+  # api_version: "33.0"  # must be string
+  images:
+    ubuntu1804:
+      catalog: IS-ServiceCatalog
+      template: Ubuntu Server 18.04 LTS 64bit Patched October 2021
+    centos8:
+      catalog: IS-ServiceCatalog
+      template: CentOS 8 64bit Patched October 2021
+    centos7:
+      catalog: IS-ServiceCatalog
+      template: CentOS 7 64bit Patched October 2021
+    debian10:
+      catalog: IS-ServiceCatalog
+      template: Debian 10 64bit Patched October 2021
+  storage_policies:
+    hdd: Standard Storage
+    ssd: Premium Storage
+  external_network_internet: Internet-external
+  recomended_dnses: ["194.204.152.34", "194.204.159.1"]
+
+exea: 
+  name: Exea Cloud
+  host: vcloud.exea.pl
+  images:
+    ubuntu1804:
+      catalog: Linux
+      template: TEMP-Ubuntu-18.04.5
+    centos8:
+      catalog: Linux
+      template: TEMP-CentOS-8.4.2105
+  storage_policies:
+    hdd: HDD Storage Policy
+    ssd: SSD Storage Policy
+  external_network_internet: EXEA_01_EXTERNAL_NETWORK_03
+  recomended_dnses: ["8.8.8.8", "8.8.4.4"]
+
+techpark:
+  name: Techpark
+  host: techpark-vdc.orange.sk
+  images:
+    ubuntu1804:
+      catalog: "OrangePublicCatalog"
+      template: "Ubuntu 18.04 Server (20190930)"
+  storage_policies:
+    hdd: Tier2-storage-policy
+    ssd: Tier1-SSD
+  external_network_internet: Ext-Shared-Internet2-VLAN3497
+  recomended_dnses: ["95.105.251.199", "8.8.8.8"]

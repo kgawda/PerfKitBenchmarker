@@ -1,0 +1,2 @@
+#git+https://github.com/vmware/pyvcloud.git@refs/pull/789/head
+PyYAML

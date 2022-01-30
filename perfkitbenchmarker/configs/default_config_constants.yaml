@@ -51,6 +51,11 @@ default_single_core: &default_single_core
     machine_type: cx2-2x4
     zone: us-south-1
     image: null
+  VMware:
+    image: null
+    machine_type:
+      cpus: 1
+      memory: 2.0GiB
 
 # TODO: update the two core machines for more providers
 default_dual_core: &default_dual_core
@@ -79,6 +84,11 @@ default_dual_core: &default_dual_core
     machine_type: cx2-4x8
     zone: us-south-1
     image: null
+  VMware:
+    image: null
+    machine_type:
+      cpus: 2
+      memory: 4.0GiB
 
 # TODO(user): update the disk types below as more providers are
 # updated for the disk types refactor.
@@ -134,7 +144,10 @@ default_500_gb: &default_500_gb
     disk_type: standard
     disk_size: 500
     mount_point: /scratch
-
+  VMware:
+    disk_type: Standard
+    disk_size: 500
+    mount_point: /scratch
 
 # TODO(user): update the disk types below as more providers are
 # updated for the disk types refactor.
@@ -188,5 +201,9 @@ default_50_gb: &default_50_gb
     mount_point: /scratch
   IBMCloud:
     disk_type: standard
+    disk_size: 50
+    mount_point: /scratch
+  VMware:
+    disk_type: Standard
     disk_size: 50
     mount_point: /scratch
